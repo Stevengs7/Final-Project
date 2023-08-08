@@ -1,0 +1,20 @@
+.text-home{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -85%);
+
+}
+
+.logo{
+    position: absolute;
+    z-index: 10;
+    background-image: url(assets/dental_clinic_logo.png);
+    background-size: cover;
+    background-position: center;
+    width: 550px;
+    height: 550px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
