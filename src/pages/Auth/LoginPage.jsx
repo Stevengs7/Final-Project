@@ -116,6 +116,7 @@ export default function LoginPage() {
                   alignItems: "center",
                 }}
               >
+                <div className="logo-login"></div>
                 <Typography component="h1" variant="h5">
                   Login
                 </Typography>
