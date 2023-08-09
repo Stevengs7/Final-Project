@@ -92,6 +92,7 @@ function ResponsiveAppBar() {
     <AppBar position="static" className="ResponsiveAppBar">
       <Container>
         <Toolbar disableGutters>
+          <div className="logo" sx={{ display: { xs: "none" } }}></div>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
