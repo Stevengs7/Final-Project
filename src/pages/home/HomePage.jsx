@@ -18,9 +18,9 @@ export default function HomePage() {
             <Typography variant="h5" component="h5" gutterBottom sx={{ p: 5 }}>
               Welcome to our Online Learning Platform! Expand your horizons and
               embrace the world of knowledge with our diverse range of courses.
-              Our platform is here to empower you on your learning
-              journey. Dive in, explore, and unlock a world of endless
-              possibilities with our tutors!
+              Our platform is here to empower you on your learning journey. Dive
+              in, explore, and unlock a world of endless possibilities with our
+              tutors!
             </Typography>
             <Box>
               <NavLink style={{ textDecoration: "none" }} to="/register">
@@ -59,7 +59,13 @@ export default function HomePage() {
           </div>
         </Grid>
         <Grid item xs={12} sm={5}>
-          <div className="back-home"></div>
+          <div className="back-home">
+            <img
+              className="logo"
+              src="../../../public/logo/logo_white.png"
+              alt=""
+            />
+          </div>
         </Grid>
       </Grid>
     </>

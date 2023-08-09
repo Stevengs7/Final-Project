@@ -1,0 +1,24 @@
+.cabecera{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 300px;
+    background-image: url(../../public/about/cabecera.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 700px;
+    background-image: url(../../public/about/footer_class.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}

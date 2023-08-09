@@ -1,3 +1,7 @@
+::-webkit-scrollbar{
+    display: none;
+}
+
 .back-home{
     height: 93vh;
     width: 100%;
@@ -5,7 +9,15 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    .logo{
+        width: 150px;
+        height: 150px;
+        margin-bottom: 200px;
+    }
 }
 
 .text-home{
