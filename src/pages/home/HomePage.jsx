@@ -68,11 +68,7 @@ export default function HomePage() {
             </Grid>
             <Grid item xs={12} sm={5}>
               <div className="back-home">
-                <img
-                  className="logo"
-                  src="../../../public/logo/logo_white.png"
-                  alt=""
-                />
+                <img className="logo" src="/logo/logo_white.png" alt="" />
               </div>
             </Grid>
           </Grid>
@@ -124,11 +120,7 @@ export default function HomePage() {
             </Grid>
             <Grid item xs={12} sm={5}>
               <div className="back-home">
-                <img
-                  className="logo"
-                  src="../../../public/logo/logo_white.png"
-                  alt=""
-                />
+                <img className="logo" src="/logo/logo_white.png" alt="" />
               </div>
             </Grid>
           </Grid>
