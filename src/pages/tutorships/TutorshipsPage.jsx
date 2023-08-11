@@ -56,7 +56,7 @@ export default function TutorshipsPage() {
               <CardMedia
                 component="img"
                 height="140"
-                image="../../../public/images/subjects/subject_2.jpg"
+                image="/images/subjects/subject_2.jpg"
                 alt="english"
               />
               <CardContent>
@@ -76,7 +76,7 @@ export default function TutorshipsPage() {
               <CardMedia
                 component="img"
                 height="140"
-                image="../../../public/images/subjects/subject_3.jpg"
+                image="/images/subjects/subject_3.jpg"
                 alt="spanish"
               />
               <CardContent>
@@ -116,7 +116,7 @@ export default function TutorshipsPage() {
               <CardMedia
                 component="img"
                 height="140"
-                image="../../../public/images/subjects/subject_5.jpg"
+                image="/images/subjects/subject_5.jpg"
                 alt="Science"
               />
               <CardContent>
@@ -136,7 +136,7 @@ export default function TutorshipsPage() {
               <CardMedia
                 component="img"
                 height="140"
-                image="../../../public/images/subjects/subject_6.jpg"
+                image="/images/subjects/subject_6.jpg"
                 alt="History"
               />
               <CardContent>
@@ -156,7 +156,7 @@ export default function TutorshipsPage() {
               <CardMedia
                 component="img"
                 height="140"
-                image="../../../public/images/subjects/subject_7.jpg"
+                image="/images/subjects/subject_7.jpg"
                 alt="Art"
               />
               <CardContent>
@@ -176,7 +176,7 @@ export default function TutorshipsPage() {
               <CardMedia
                 component="img"
                 height="140"
-                image="../../../public/images/subjects/subject_8.jpg"
+                image="/images/subjects/subject_8.jpg"
                 alt="Music"
               />
               <CardContent>
@@ -196,7 +196,7 @@ export default function TutorshipsPage() {
               <CardMedia
                 component="img"
                 height="140"
-                image="../../../public/images/subjects/subject_9.jpg"
+                image="/images/subjects/subject_9.jpg"
                 alt="Computer Science"
               />
               <CardContent>
