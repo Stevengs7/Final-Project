@@ -88,6 +88,23 @@ studentService.updateTutorship = async (token, appointment, id) => {
   return response.data;
 };
 
+// Delete Appointment----------------------------------------------------
+
+studentService.deleteTutorship = async (token, value) => {
+  const options = {
+    method: "DELETE",
+    url: `${global.BASE_API_URL}/api/student/tutorship-delete`,
+    data: value,
+    headers: {
+      accept: "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  //await sleep(2000); // TODO
+  const response = await axios.request(options);
+  return response.data;
+};
+
 // ====================== Get Tutors =======================================================
 
 studentService.getAllTutors = async (token, usersPage) => {

@@ -11,7 +11,6 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  Paper,
   Table,
   TableBody,
   TableCell,
@@ -52,7 +51,7 @@ export default function ProfilePage() {
   const [isLoading, setisLoading] = useState(true);
   const [open, setOpen] = React.useState(false);
   const [tutorships, setTutorships] = useState([]);
-  /*   const [deleteId, setDeleteId] = React.useState({}); */
+  const [deleteId, setDeleteId] = React.useState({});
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -97,19 +96,19 @@ export default function ProfilePage() {
   // ============================= HANDLES ==============================================
 
   // appointment delete
-  /*   const handleDeleteAppointment = async () => {
+  const handleDeleteTutorship = async () => {
     try {
       const id = { id: deleteId };
-      await studentService.deleteAppointment(token, id);
-      const data = await studentService.getMyAppointments(token);
-      setAppointments(data.results.appointments);
+      await studentService.deleteTutorship(token, id);
+      const data = await studentService.getTutorships(token);
+      setTutorships(data.results.tutorships);
       setOpen(false);
     } catch (error) {
       console.log(error);
     } finally {
       setisLoading(false);
     }
-  }; */
+  };
 
   // ============================= EDIT APPOINTMENT ==============================================
   const handleEditAppointment = async (id) => {
@@ -213,7 +212,7 @@ export default function ProfilePage() {
           <Typography
             sx={{ mt: 5, mb: 5, justify: "center" }}
             component={"h2"}
-            variant="h5"
+            variant="h2"
             gutterBottom
           >
             Tutorships
@@ -272,7 +271,7 @@ export default function ProfilePage() {
           </TableContainer>
 
           {/* DIALOG */}
-          {/*  <div>
+          <div>
             <Dialog
               open={open}
               TransitionComponent={Transition}
@@ -280,7 +279,7 @@ export default function ProfilePage() {
               onClose={handleClose}
               aria-describedby="alert-dialog-slide-description"
             >
-              <DialogTitle>{`Are you sure to delte your appointment?`}</DialogTitle>
+              <DialogTitle>{`Are you sure to delte your Tutorship?`}</DialogTitle>
               <DialogContent>
                 <DialogContentText id="alert-dialog-slide-description">
                   Once deleted this change cannot be reversed.
@@ -288,12 +287,12 @@ export default function ProfilePage() {
               </DialogContent>
               <DialogActions>
                 <Button onClick={handleClose}>Disagree</Button>
-                <Button onClick={(handleClose, handleDeleteAppointment)}>
+                <Button onClick={(handleClose, handleDeleteTutorship)}>
                   Agree
                 </Button>
               </DialogActions>
             </Dialog>
-          </div> */}
+          </div>
         </Container>
       ) : (
         <Typography>Loading...</Typography>
