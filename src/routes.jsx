@@ -7,6 +7,7 @@ import LoginPage from "./pages/Auth/LoginPage";
 import RegisterPage from "./pages/Auth/RegisterPage";
 import AboutPage from "./pages/about/AboutPage";
 import TutorshipsPage from "./pages/tutorships/TutorshipsPage";
+import ProfilePage from "./pages/profile/ProfilePage";
 import Page404 from "./pages/Page404";
 
 export default function AppRouter() {
@@ -17,6 +18,8 @@ export default function AppRouter() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/tutorships" element={<TutorshipsPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
         <Route path="/tutorships" element={<TutorshipsPage />} />
         <Route path="/404" element={<Page404 />} />
         <Route path="*" element={<Navigate to="/404" />} />

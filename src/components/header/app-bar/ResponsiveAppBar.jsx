@@ -25,23 +25,6 @@ import "./ResponsiveAppBar.scss";
 import { updateAuthStateLogout } from "../../../features/authentication/updateAuthState";
 import { createTheme } from "@mui/material/styles";
 // ----------------------------------------------------------------------
-const theme = createTheme({
-  palette: {
-    primary: {
-      light: "#3d3ed6",
-      main: "#3d3ed6",
-      dark: "#002884",
-      contrastText: "#fff",
-    },
-    secondary: {
-      light: "#ff7961",
-      main: "#f44336",
-      dark: "#ba000d",
-      contrastText: "#000",
-    },
-  },
-});
-// ----------------------------------------------------------------------
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -50,6 +33,8 @@ function ResponsiveAppBar() {
   const userName = useSelector((state) => state.auth.userInfo.name);
   const userRole = useSelector((state) => state.auth.userInfo.role);
   const isAdmin = userRole == "admin";
+  const isStudent = userRole == "student";
+  const isTutor = userRole == "tutor";
 
   const handleLogout = () => {
     console.log("logout");
@@ -57,8 +42,8 @@ function ResponsiveAppBar() {
   };
 
   const pathProfile = {
-    dentist: "/dentist-profile",
-    patient: "/profile",
+    tutor: "/dentist-profile",
+    student: "/profile",
   };
 
   const pages = [
