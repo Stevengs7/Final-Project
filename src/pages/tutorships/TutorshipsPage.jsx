@@ -63,8 +63,8 @@ export default function TutorshipsPage() {
               <CardMedia
                 component="img"
                 height="140"
-                image="public/images/subjects/subject_2.jpg"
-                alt="green iguana"
+                image="../../../public/images/subjects/subject_2.jpg"
+                alt="english"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -83,8 +83,8 @@ export default function TutorshipsPage() {
               <CardMedia
                 component="img"
                 height="140"
-                image="public/images/subjects/subject_3.jpg"
-                alt="green iguana"
+                image="../../../public/images/subjects/subject_3.jpg"
+                alt="spanish"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -103,8 +103,8 @@ export default function TutorshipsPage() {
               <CardMedia
                 component="img"
                 height="140"
-                image="public/images/subjects/subject_4.jpg"
-                alt="green iguana"
+                image="../../../public/images/subjects/subject_4.jpg"
+                alt="Math"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -123,8 +123,8 @@ export default function TutorshipsPage() {
               <CardMedia
                 component="img"
                 height="140"
-                image="public/images/subjects/subject_5.jpg"
-                alt="green iguana"
+                image="../../../public/images/subjects/subject_5.jpg"
+                alt="Science"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -143,8 +143,8 @@ export default function TutorshipsPage() {
               <CardMedia
                 component="img"
                 height="140"
-                image="public/images/subjects/subject_6.jpg"
-                alt="green iguana"
+                image="../../../public/images/subjects/subject_6.jpg"
+                alt="History"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -163,8 +163,8 @@ export default function TutorshipsPage() {
               <CardMedia
                 component="img"
                 height="140"
-                image="public/images/subjects/subject_7.jpg"
-                alt="green iguana"
+                image="../../../public/images/subjects/subject_7.jpg"
+                alt="Art"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -183,8 +183,8 @@ export default function TutorshipsPage() {
               <CardMedia
                 component="img"
                 height="140"
-                image="public/images/subjects/subject_8.jpg"
-                alt="green iguana"
+                image="../../../public/images/subjects/subject_8.jpg"
+                alt="Music"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -203,8 +203,8 @@ export default function TutorshipsPage() {
               <CardMedia
                 component="img"
                 height="140"
-                image="public/images/subjects/subject_9.jpg"
-                alt="green iguana"
+                image="../../../public/images/subjects/subject_9.jpg"
+                alt="Computer Science"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">

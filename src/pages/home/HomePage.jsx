@@ -90,14 +90,10 @@ export default function HomePage() {
                 >
                   <strong> Welcome back {userName}!</strong>
                 </Typography>
-                <Typography
-                  variant="h5"
-                  component="h5"
-                  sx={{ p: 2 }}
-                >
+                <Typography variant="h5" component="h5" sx={{ p: 2 }}>
                   good to see you again!
                 </Typography>
-                <Typography  gutterBottom sx={{ p: 2 }}>
+                <Typography gutterBottom sx={{ p: 2 }}>
                   You can check your tutorships on you profile page or you can
                   contact with others tutors on Tutorships page.
                 </Typography>
