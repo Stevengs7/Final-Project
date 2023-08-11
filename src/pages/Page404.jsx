@@ -31,17 +31,12 @@ export default function Page404() {
             mistyped the URL? Be sure to check your spelling.
           </Typography>
 
-          <Box
-            component="img"
-            src="/assets/illustrations/illustration_404.svg"
-            sx={{ height: 260, mx: "auto", my: { xs: 5, sm: 10 } }}
-          />
-
           <Button
             to="/"
             size="large"
             variant="contained"
             component={RouterLink}
+            sx={{ backgroundColor: "#3d3ed6", mt: 10 }}
           >
             Go to Home
           </Button>
