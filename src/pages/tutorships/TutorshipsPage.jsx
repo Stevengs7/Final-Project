@@ -28,16 +28,9 @@ export default function TutorshipsPage() {
         >
           Subjects
         </Typography>
-        <Container className="TextPhoto">
+        <Container>
           <Box>
-            <Typography
-              className="welcome"
-              variant="h2"
-              fontSize={25}
-              align="center"
-              textAlign={"justify"}
-              gutterBottom
-            >
+            <Typography variant="h2" fontSize={25} gutterBottom>
               Welcome to TeachMe Tutorships, we're your partners in education,
               dedicated to helping you unlock your full potential and achieve
               your goals. With a community of passionate tutors and a commitment
@@ -103,7 +96,7 @@ export default function TutorshipsPage() {
               <CardMedia
                 component="img"
                 height="140"
-                image="../../../public/images/subjects/subject_4.jpg"
+                image="/images/subjects/subject_4.jpg"
                 alt="Math"
               />
               <CardContent>
