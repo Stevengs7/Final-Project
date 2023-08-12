@@ -58,7 +58,7 @@ export default function TutorshipsPage() {
       >
         <Typography
           variant="h1"
-          fontSize={35}
+          fontSize={60}
           align="center"
           fontWeight={400}
           gutterBottom
@@ -105,14 +105,16 @@ export default function TutorshipsPage() {
                   <Typography variant="body2" color="text.secondary">
                     Explore inside the subject and find your ideal tutor.
                   </Typography>
-                  <Button
-                    variant="contained"
-                    size="small"
-                    sx={{ mt: 2, backgroundColor: "#3d3ed6" }}
-                    onClick={() => handleSubject(sub.id)}
-                  >
-                    Find your ideal tutor
-                  </Button>
+                  <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+                    <Button
+                      variant="contained"
+                      size="small"
+                      sx={{ mt: 2, backgroundColor: "#3d3ed6" }}
+                      onClick={() => handleSubject(sub.id)}
+                    >
+                      Find your ideal tutor
+                    </Button>
+                  </Box>
                 </CardContent>
               </Card>
             ))}

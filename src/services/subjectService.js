@@ -37,4 +37,20 @@ subjectService.getSubjectByID = async (token, id) => {
   return response.data;
 };
 
+// =================== Create Tutorship ==========================================================
+
+subjectService.CreateTutorship = async (token, tutorship) => {
+  const options = {
+    method: "POST",
+    url: `${global.BASE_API_URL}/api/student/tutorship-create`,
+    data: tutorship,
+    headers: {
+      accept: "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  //await sleep(2000); // TODO
+  const response = await axios.request(options);
+  return response.data;
+};
 export default subjectService;

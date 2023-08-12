@@ -1,0 +1,50 @@
+::-webkit-scrollbar{
+    display: none;
+}
+.root{
+    margin: 0;
+    padding: 0;
+}
+.user-info{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 1em;
+
+    .profile-image{
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        position: absolute;
+        top: 33%;
+        left: 50%;
+        transform: translate(-50%, -33%); 
+    }
+    .edit-button{
+        right: 250px;
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+        padding-bottom: 50px;
+        padding-right: 25px;
+    
+    }
+    .cabecera{
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 250px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-radius: 20px 20px 0px 0px;
+    }
+    
+}
+
+
+.tutorships-table{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 1em;
+}
