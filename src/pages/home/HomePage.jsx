@@ -76,13 +76,13 @@ export default function HomePage() {
       ) : (
         <>
           <Grid container spacing={3}>
-            <Grid item xs={12} sm={7}>
+            <Grid item xs={12} sm={8}>
               <div className="text-home">
                 <Typography
                   variant="h2"
                   component="h3"
                   gutterBottom
-                  sx={{ color: "#3d3ed6", mb: 2, mt: 10 }}
+                  sx={{ color: "#3d3ed6", mt: 12 }}
                 >
                   <strong> Welcome back {userName}!</strong>
                 </Typography>
@@ -106,7 +106,7 @@ export default function HomePage() {
                     <Button
                       variant="contained"
                       sx={{
-                        mt: 3,
+                        mt: 1,
                         backgroundColor: "#3d3ed6",
                         color: "white",
                         textDecoration: "none",
@@ -118,7 +118,7 @@ export default function HomePage() {
                 </Box>
               </div>
             </Grid>
-            <Grid item xs={12} sm={5}>
+            <Grid item xs={12} sm={4}>
               <div className="back-home">
                 <img className="logo" src="/logo/logo_white.png" alt="" />
               </div>

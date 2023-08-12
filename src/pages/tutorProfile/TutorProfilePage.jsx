@@ -18,7 +18,7 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import "./TutorProfile.scss";
+import "./TutorProfilePage.scss";
 
 //------------------------------------DIALOG WINDOW---------------------------------------------------------
 
@@ -45,7 +45,7 @@ import { format } from "date-fns";
 import { red } from "@mui/material/colors";
 import { useNavigate } from "react-router-dom";
 
-export default function TutorProfile() {
+export default function TutorProfilePage() {
   // ----------------------------- hooks -----------------------------------------
 
   const token = useSelector((state) => state.auth.token);

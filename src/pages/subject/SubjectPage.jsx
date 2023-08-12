@@ -17,7 +17,7 @@ import CardMedia from "@mui/material/CardMedia";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import subjectService from "../../services/subjectService";
-
+import "./SubjectPage.scss";
 // =============================== Create tutorship window ==============================================
 
 import Dialog from "@mui/material/Dialog";
@@ -337,8 +337,18 @@ export default function SubjectPage() {
                 </DialogContentText>
               </DialogContent>
               <DialogActions>
-                <Button onClick={handleClose}>Cancel</Button>
-                <Button type="submit">Create</Button>
+                <Button
+                  sx={{ bmt: 2, backgroundColor: "#3d3ed6", color: "#fff" }}
+                  onClick={handleClose}
+                >
+                  Cancel
+                </Button>
+                <Button
+                  sx={{ bmt: 2, backgroundColor: "#3d3ed6", color: "#fff" }}
+                  type="submit"
+                >
+                  Create
+                </Button>
               </DialogActions>
             </Dialog>
           </Box>
