@@ -1,6 +1,6 @@
 import { Container } from "@mui/system";
 import React, { useEffect, useState } from "react";
-import studentService from "../../services/studentService";
+import tutorService from "../../services/tutorService";
 import { useSelector } from "react-redux";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
@@ -18,7 +18,7 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import "./ProfilePage.scss";
+import "./TutorProfile.scss";
 
 //------------------------------------DIALOG WINDOW---------------------------------------------------------
 
@@ -39,11 +39,13 @@ import CakeRoundedIcon from "@mui/icons-material/CakeRounded";
 import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import CreateRoundedIcon from "@mui/icons-material/CreateRounded";
 import DeleteForeverRoundedIcon from "@mui/icons-material/DeleteForeverRounded";
+import AutoStoriesRoundedIcon from "@mui/icons-material/AutoStoriesRounded";
+import VerifiedRoundedIcon from "@mui/icons-material/VerifiedRounded";
 import { format } from "date-fns";
 import { red } from "@mui/material/colors";
 import { useNavigate } from "react-router-dom";
 
-export default function ProfilePage() {
+export default function TutorProfile() {
   // ----------------------------- hooks -----------------------------------------
 
   const token = useSelector((state) => state.auth.token);
@@ -61,7 +63,7 @@ export default function ProfilePage() {
 
   const getProfile = async () => {
     try {
-      const data = await studentService.getMyProfile(token);
+      const data = await tutorService.getMyProfile(token);
       setProfile(data);
       console.log(data);
     } catch (error) {
@@ -73,7 +75,7 @@ export default function ProfilePage() {
 
   const getTutorships = async () => {
     try {
-      const data = await studentService.getTutorships(token);
+      const data = await tutorService.getTutorships(token);
       setTutorships(data.results.tutorships);
       console.log(data);
       console.log(data.results.tutorships);
@@ -100,8 +102,8 @@ export default function ProfilePage() {
   const handleDeleteTutorship = async () => {
     try {
       const id = { id: deleteId };
-      await studentService.deleteTutorship(token, id);
-      const data = await studentService.getTutorships(token);
+      await tutorService.deleteTutorship(token, id);
+      const data = await tutorService.getTutorships(token);
       setTutorships(data.results.tutorships);
       setOpen(false);
     } catch (error) {
@@ -183,6 +185,22 @@ export default function ProfilePage() {
                       </ListItemIcon>
                       <ListItemText primary={profile?.role.role} />
                     </ListItem>
+                    <ListItem>
+                      <ListItemIcon>
+                        <AutoStoriesRoundedIcon />
+                      </ListItemIcon>
+                      <ListItemText
+                        primary={`${profile?.tutor.subject.subject_name}`}
+                      />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemIcon>
+                        <VerifiedRoundedIcon />
+                      </ListItemIcon>
+                      <ListItemText
+                        primary={`Verified: ${profile?.tutor.verificated}`}
+                      />
+                    </ListItem>
                   </List>
                 </Box>
                 <Box className={"edit-button"} sx={{ gap: 2 }}>
@@ -194,15 +212,6 @@ export default function ProfilePage() {
                     onClick={() => handleEditProfile(profile)}
                   >
                     Edit profile
-                  </Button>
-                  <Button
-                    variant="contained"
-                    size="small"
-                    sx={{ backgroundColor: "#3d3ed6" }}
-                    startIcon={<CreateRoundedIcon />}
-                    onClick={handleCreateAppointment}
-                  >
-                    New Tutorship
                   </Button>
                 </Box>
               </Box>
@@ -223,7 +232,7 @@ export default function ProfilePage() {
               <TableHead>
                 <TableRow>
                   <TableCell align="left">ID</TableCell>
-                  <TableCell align="left">Tutor</TableCell>
+                  <TableCell align="left">Student</TableCell>
                   <TableCell align="left">Subject</TableCell>
                   <TableCell align="left">Date</TableCell>
                   <TableCell align="left">Time</TableCell>
@@ -241,14 +250,14 @@ export default function ProfilePage() {
                       {u.id}
                     </TableCell>
                     <TableCell align="left">
-                      {u.tutor.user.user_name} {u.tutor.user.user_last_name}
+                      {u.student.user.user_name} {u.student.user.user_last_name}
                     </TableCell>
                     <TableCell align="left">
-                      {u.tutor.subject.subject_name}
+                      {profile.tutor.subject.subject_name}
                     </TableCell>
                     <TableCell align="left">{u.date}</TableCell>
                     <TableCell align="left">{u.time} h</TableCell>
-                    <TableCell align="left">{u.tutor.user.email}</TableCell>
+                    <TableCell align="left">{u.student.user.email}</TableCell>
                     <TableCell align="left">{u.location}</TableCell>
                     <TableCell align="left">
                       <Button style={{ Align: "center" }}>

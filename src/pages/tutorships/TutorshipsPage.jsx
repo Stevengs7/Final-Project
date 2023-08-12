@@ -90,6 +90,7 @@ export default function TutorshipsPage() {
                 key={sub.id}
                 sx={{
                   minWidth: 200,
+                  borderRadius: 4,
                 }}
               >
                 <CardMedia
@@ -112,7 +113,7 @@ export default function TutorshipsPage() {
                       sx={{ mt: 2, backgroundColor: "#3d3ed6" }}
                       onClick={() => handleSubject(sub.id)}
                     >
-                      Find your ideal tutor
+                      Explore
                     </Button>
                   </Box>
                 </CardContent>

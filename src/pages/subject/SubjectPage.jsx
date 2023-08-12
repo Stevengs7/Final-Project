@@ -89,18 +89,12 @@ export default function SubjectPage() {
     getTutors();
   }, []);
 
-  useEffect(() => {
-    console.log("tutor changed", tutor);
-  }, [tutor]);
-
   const getTutors = async () => {
     setIsLoading(true);
     try {
       const data = await subjectService.getSubjectByID(token, id);
       setTutor(data.tutor);
       setSubject(data);
-      console.log(data.tutor);
-      console.log(data);
     } catch (error) {
       console.log(error);
     } finally {
@@ -113,7 +107,6 @@ export default function SubjectPage() {
   const handleClickOpen = (id) => {
     setOpen(true);
     setCreateTutorship(id);
-    console.log(id);
   };
 
   const handleClose = () => {
@@ -153,7 +146,6 @@ export default function SubjectPage() {
       time: data.get("time"),
       location: data.get("location"),
     };
-    console.log(tutorship);
     CreateTutorship(tutorship);
   };
 

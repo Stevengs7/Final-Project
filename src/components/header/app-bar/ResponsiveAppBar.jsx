@@ -42,7 +42,7 @@ function ResponsiveAppBar() {
   };
 
   const pathProfile = {
-    tutor: "/profile",
+    tutor: "/tutor-profile",
     student: "/profile",
   };
 
