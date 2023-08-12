@@ -9,6 +9,7 @@ import AboutPage from "./pages/about/AboutPage";
 import TutorshipsPage from "./pages/tutorships/TutorshipsPage";
 import ProfilePage from "./pages/profile/ProfilePage";
 import Page404 from "./pages/Page404";
+import SubjectPage from "./pages/subject/SubjectPage";
 
 export default function AppRouter() {
   return (
@@ -21,6 +22,7 @@ export default function AppRouter() {
         <Route path="/tutorships" element={<TutorshipsPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/tutorships" element={<TutorshipsPage />} />
+        <Route path="/subject/:id" element={<SubjectPage />} />
         <Route path="/404" element={<Page404 />} />
         <Route path="*" element={<Navigate to="/404" />} />
       </Routes>

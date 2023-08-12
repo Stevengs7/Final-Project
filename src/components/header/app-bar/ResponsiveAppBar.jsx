@@ -54,7 +54,6 @@ function ResponsiveAppBar() {
 
   const settings = [
     { title: "Profile", path: pathProfile[userRole], handle: null },
-    { title: "Search tutorship", path: "/search-tutorship", handle: null },
     { title: "Logout", path: "/", handle: handleLogout },
   ];
 

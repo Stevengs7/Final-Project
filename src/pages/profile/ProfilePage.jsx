@@ -75,6 +75,7 @@ export default function ProfilePage() {
     try {
       const data = await studentService.getTutorships(token);
       setTutorships(data.results.tutorships);
+      console.log(data);
       console.log(data.results.tutorships);
     } catch (error) {
       console.log(error);
@@ -127,7 +128,7 @@ export default function ProfilePage() {
   };
 
   const handleCreateAppointment = async () => {
-    navigate("/create-appointment");
+    navigate("/tutorships");
   };
 
   // ---------------------------------- return ----------------------------------------------------

@@ -1,12 +1,49 @@
-import { Box, Container, Typography } from "@mui/material";
-import React from "react";
+import { Box, Button, Container, Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import subjectService from "../../services/subjectService";
 
 // =============================================================================
 
 export default function TutorshipsPage() {
+  const [subject, setSubject] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const token = useSelector((state) => state.auth.token);
+  const userId = useSelector((state) => state.auth.userInfo.id);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    getSubjects();
+  }, []);
+
+  const getSubjects = async () => {
+    setIsLoading(true);
+    try {
+      const data = await subjectService.getAllSubjects(token);
+      setSubject(data.results.subjects);
+      console.log(data.results.subjects);
+      console.log(userId);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleSubject = async (id) => {
+    try {
+      console.log(id);
+      navigate(`/subject/${id}`);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
   return (
     <>
       <Container
@@ -48,166 +85,37 @@ export default function TutorshipsPage() {
               gap: "3em",
             }}
           >
-            <Card
-              sx={{
-                minWidth: 200,
-              }}
-            >
-              <CardMedia
-                component="img"
-                height="140"
-                image="/images/subjects/subject_2.jpg"
-                alt="english"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  English
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Find your ideal tutor.
-                </Typography>
-              </CardContent>
-            </Card>
-            <Card
-              sx={{
-                minWidth: 200,
-              }}
-            >
-              <CardMedia
-                component="img"
-                height="140"
-                image="/images/subjects/subject_3.jpg"
-                alt="spanish"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Spanish
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Find your ideal tutor.
-                </Typography>
-              </CardContent>
-            </Card>
-            <Card
-              sx={{
-                minWidth: 200,
-              }}
-            >
-              <CardMedia
-                component="img"
-                height="140"
-                image="/images/subjects/subject_4.jpg"
-                alt="Math"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Matemathics
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Find your ideal tutor.
-                </Typography>
-              </CardContent>
-            </Card>
-            <Card
-              sx={{
-                minWidth: 200,
-              }}
-            >
-              <CardMedia
-                component="img"
-                height="140"
-                image="/images/subjects/subject_5.jpg"
-                alt="Science"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Science
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Find your ideal tutor.
-                </Typography>
-              </CardContent>
-            </Card>
-            <Card
-              sx={{
-                minWidth: 200,
-              }}
-            >
-              <CardMedia
-                component="img"
-                height="140"
-                image="/images/subjects/subject_6.jpg"
-                alt="History"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  History
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Find your ideal tutor.
-                </Typography>
-              </CardContent>
-            </Card>
-            <Card
-              sx={{
-                minWidth: 200,
-              }}
-            >
-              <CardMedia
-                component="img"
-                height="140"
-                image="/images/subjects/subject_7.jpg"
-                alt="Art"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Art
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Find your ideal tutor.
-                </Typography>
-              </CardContent>
-            </Card>
-            <Card
-              sx={{
-                minWidth: 200,
-              }}
-            >
-              <CardMedia
-                component="img"
-                height="140"
-                image="/images/subjects/subject_8.jpg"
-                alt="Music"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Music
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Find your ideal tutor.
-                </Typography>
-              </CardContent>
-            </Card>
-            <Card
-              sx={{
-                minWidth: 200,
-              }}
-            >
-              <CardMedia
-                component="img"
-                height="140"
-                image="/images/subjects/subject_9.jpg"
-                alt="Computer Science"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Computer Science
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Find your ideal tutor.
-                </Typography>
-              </CardContent>
-            </Card>
+            {subject.map((sub) => (
+              <Card
+                key={sub.id}
+                sx={{
+                  minWidth: 200,
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={`/images/subjects/subject_${sub.id}.jpg`}
+                  alt="english"
+                />
+                <CardContent value={sub.id}>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {sub.subject_name}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Explore inside the subject and find your ideal tutor.
+                  </Typography>
+                  <Button
+                    variant="contained"
+                    size="small"
+                    sx={{ mt: 2, backgroundColor: "#3d3ed6" }}
+                    onClick={() => handleSubject(sub.id)}
+                  >
+                    Find your ideal tutor
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
           </Box>
         </Container>
       </Container>
