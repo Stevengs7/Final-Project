@@ -36,6 +36,10 @@ export default function ProfileEdit() {
   const [isLoading, setisLoading] = useState(true);
   const [formValues, setFormValues] = useState(initialFormValues);
   const [showPassword, setShowPassword] = useState(false);
+  const userRole = useSelector((state) => state.auth.userInfo.role);
+  const isAdmin = userRole == "admin";
+  const isStudent = userRole == "student";
+  const isTutor = userRole == "tutor";
 
   const navigate = useNavigate();
 
@@ -89,7 +93,12 @@ export default function ProfileEdit() {
     try {
       const userUpdates = await studentService.updateMyProfile(token, updates);
       setProfile(userUpdates);
-      navigate("/profile");
+      if (isStudent) {
+        navigate("/profile");
+      } else {
+        navigate("/tutor-profile");
+      }
+
       console.log(userUpdates);
     } catch (error) {
       console.log(error.response.data.message);
@@ -101,7 +110,7 @@ export default function ProfileEdit() {
       {!isLoading ? (
         <div
           style={{
-            backgroundImage: `url(assets/covers/cover_${profile.id}.jpg)`,
+            backgroundImage: `url(assets/covers/cover_default.jpg)`,
           }}
           className="back-img"
         >
@@ -130,7 +139,7 @@ export default function ProfileEdit() {
               }}
             >
               <Avatar
-                src={`assets/avatars/avatar_${profile.id}.jpg`}
+                src={`assets/avatars/avatar_default.jpg`}
                 sx={{
                   width: "20%",
                   height: "20%",
@@ -219,18 +228,6 @@ export default function ProfileEdit() {
                         readOnly: false,
                       }}
                     />
-                    <TextField
-                      required
-                      fullWidth
-                      id="phone"
-                      label="Phone Number"
-                      name="phone_number"
-                      value={formValues.phone_number}
-                      onChange={handleChange}
-                      InputProps={{
-                        readOnly: false,
-                      }}
-                    />
                   </Stack>
                 </Grid>
 
@@ -264,7 +261,7 @@ export default function ProfileEdit() {
                   type="submit"
                   fullWidth
                   variant="contained"
-                  sx={{ mt: 3, mb: 2 }}
+                  sx={{ mt: 3, mb: 2, backgroundColor: "#3d3ed6" }}
                 >
                   Save changes
                 </Button>

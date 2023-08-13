@@ -25,7 +25,7 @@ studentService.getMyProfile = async (token) => {
 studentService.updateMyProfile = async (token, updates) => {
   const options = {
     method: "PUT",
-    url: `${global.BASE_API_URL}/api/users/update-profile`,
+    url: `${global.BASE_API_URL}/api/student/update-profile`,
     data: updates,
     headers: {
       accept: "application/json",

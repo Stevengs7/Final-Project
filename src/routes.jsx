@@ -11,6 +11,7 @@ import ProfilePage from "./pages/profile/ProfilePage";
 import SubjectPage from "./pages/subject/SubjectPage";
 import TutorProfilePage from "./pages/tutorProfile/TutorProfilePage";
 import Page404 from "./pages/Page404";
+import ProfileEdit from "./pages/profile/ProfileEdit";
 
 export default function AppRouter() {
   return (
@@ -22,6 +23,7 @@ export default function AppRouter() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/tutorships" element={<TutorshipsPage />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/profile-edit" element={<ProfileEdit />} />
         <Route path="/tutor-profile" element={<TutorProfilePage />} />
         <Route path="/tutorships" element={<TutorshipsPage />} />
         <Route path="/subject/:id" element={<SubjectPage />} />
