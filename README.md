@@ -1,4 +1,4 @@
-# API Dental Clinic
+# TeachME website - Learn and enjoy at same time
 
 <details>
   <summary>Contenido 📝</summary>
