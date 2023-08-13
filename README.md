@@ -61,7 +61,7 @@ poder contactar contigo.
 2. `$ npm install`
 3. `$ npm run dev`
 
-## Vistas Escritorio
+## 💻 Vistas Escritorio
 
 Home
 <img src="./public/assets/readme/desktop/home.png">
@@ -75,7 +75,10 @@ Login
 Patient profile
 <img src="./public/assets/readme/desktop/profile.png">
 
-## Vistas Escritorio
+
+
+
+## 📱 Vistas mobile
 
 Home
 <img src="./public/assets/readme/mobile/home.png">
