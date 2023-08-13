@@ -51,7 +51,7 @@ poder contactar contigo.
 
 ## Deploy TeachMe APP
 
-<a href="https://main.d6sq1mbjbhp3p.amplifyapp.com/" target="_blank"/>Ir a la pagina web del restaurante</a>
+<a href="https://main.d6sq1mbjbhp3p.amplifyapp.com/" target="_blank"/>TeachME WebSite</a>
 
 ## Instalación en local
 
@@ -74,9 +74,6 @@ Login
 
 Patient profile
 <img src="./public/assets/readme/desktop/profile.png">
-
-
-
 
 ## 📱 Vistas mobile
 
