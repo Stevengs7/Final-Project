@@ -253,7 +253,7 @@ export default function SubjectPage() {
               aria-describedby="alert-dialog-slide-description"
             >
               <DialogTitle>{`You're creating a ${subject.subject_name} tutorship`}</DialogTitle>
-              <DialogContent>
+              <DialogContent className="tutorship-dialog">
                 <TextField
                   fullWidth
                   id="outlined-read-only-input"
@@ -264,6 +264,7 @@ export default function SubjectPage() {
                   InputProps={{
                     readOnly: true,
                   }}
+                  sx={{ display: "none" }}
                 />
                 <DialogContentText id="alert-dialog-slide-description">
                   <LocalizationProvider dateAdapter={AdapterDayjs}>

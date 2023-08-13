@@ -217,7 +217,6 @@ export default function TutorProfilePage() {
               </Box>
             </Grid>
           </React.Fragment>
-
           {/* tabla tutorships*/}
           <Typography
             sx={{ mt: 5, mb: 5, justify: "center" }}
@@ -279,7 +278,6 @@ export default function TutorProfilePage() {
               </TableBody>
             </Table>
           </TableContainer>
-
           {/* DIALOG */}
           <div>
             <Dialog
