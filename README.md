@@ -62,6 +62,8 @@ poder contactar contigo.
 2. `$ npm install`
 3. `$ npm run dev`
 
+## Vistas
+
 ## 💻 Vistas Escritorio
 
 🏠 Home
@@ -76,7 +78,7 @@ poder contactar contigo.
 
 <img src="./public/assets/readme/desktop/tutorship.png">
 
- 🚹 Student profile
+🚹 Student profile
 
 <img src="./public/assets/readme/desktop/profile.png">
 
@@ -85,7 +87,7 @@ poder contactar contigo.
 Home / Profile
 <img src="./public/assets/readme/mobile/mobile_1.png">
 
-Subjects / About 
+Subjects / About
 <img src="./public/assets/readme/mobile/mobile_2.png">
 
 ## Credenciales
