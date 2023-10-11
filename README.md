@@ -68,12 +68,15 @@ Home
 <img src="./public/assets/readme/desktop/home.png">
 
 Register
+
 <img src="./public/assets/readme/desktop/subjects.png">
 
 Login
+
 <img src="./public/assets/readme/desktop/tutorship.png">
 
-Patient profile
+Student profile
+
 <img src="./public/assets/readme/desktop/profile.png">
 
 ## 📱 Vistas mobile
@@ -81,7 +84,7 @@ Patient profile
 Home / Profile
 <img src="./public/assets/readme/mobile/mobile_1.png">
 
-Subjects / About
+Subjects / About 
 <img src="./public/assets/readme/mobile/mobile_2.png">
 
 ## Credenciales
