@@ -64,18 +64,19 @@ poder contactar contigo.
 
 ## 💻 Vistas Escritorio
 
-Home
+🏠 Home
+
 <img src="./public/assets/readme/desktop/home.png">
 
-Register
+📚 Subjects
 
 <img src="./public/assets/readme/desktop/subjects.png">
 
-Login
+📕 Create a Tutorship
 
 <img src="./public/assets/readme/desktop/tutorship.png">
 
-Student profile
+ 🚹 Student profile
 
 <img src="./public/assets/readme/desktop/profile.png">
 
