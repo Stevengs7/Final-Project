@@ -19,8 +19,9 @@
 ## Objetivo 🎯
 
 El objetivo es reducir el fracaso escolar, ayudando a los jóvenes con éste problema.
+
 Busco crear un portal en el que tanto estudiantes de cursos superiores puedan sacar un
-dinero extra, como a los estudiantes de cursos menores puedan ver de nuevo lo que no
+dinero extra, como los estudiantes de cursos menores puedan ver de nuevo lo que no
 han podido aprender en las aulas o reforzar lo ya aprendido.
 
 ## Acerca de este proyecto 🔎
@@ -77,17 +78,11 @@ Patient profile
 
 ## 📱 Vistas mobile
 
-Home
-<img src="./public/assets/readme/mobile/home.png">
+Home / Profile
+<img src="./public/assets/readme/mobile/mobile_1.png">
 
-Register
-<img src="./public/assets/readme/mobile/subjects.png">
-
-Login
-<img src="./public/assets/readme/mobile/about.png">
-
-Patient profile
-<img src="./public/assets/readme/mobile/profile.png">
+Subjects / About
+<img src="./public/assets/readme/mobile/mobile_2.png">
 
 ## Credenciales
 
